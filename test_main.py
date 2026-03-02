@@ -13,7 +13,7 @@ def test_sum():
     assert response.status_code == 200
     assert response.json() == {"result": 12}
 
-def test_multiplay():
-    response = client.get("/multiplay?a=5&b=6")
+def test_ping():
+    response = client.get("/ping")
     assert response.status_code == 200
-    assert response.json() == {"result": 30}
+    assert response.json() == {"status": "ok"}
